@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jmsg.android.gpslogger"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="18" />
+    
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/gpslogger48"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.jmsg.android.gpslogger.GPSLoggerActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Preferencias"
+            android:label="@string/pref_activity_name" >
+        </activity>
+        <service android:name="com.jmsg.android.gpslogger.service.GPSLoggerService"
+			android:permission="android.permission.ACCESS_FINE_LOCATION"
+			android:label="@string/service_name"
+			android:exported="true"
+			android:enabled="true">
+        </service>        
+    </application>
+</manifest>

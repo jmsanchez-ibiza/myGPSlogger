@@ -1,0 +1,8 @@
+myGPSLogger
+
+Aplicación Android para seguimiento por GPS.
+Creada por José María Sanchez
+jmsanchez.ibiza@gmail.com
+
+- Permite la exportación de la ruta en un archivo TXT en la tarjeta SD
+- Permite el log online mediante la plataforma Open GTS

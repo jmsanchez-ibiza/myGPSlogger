@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="@string/pref_admin_category" >
+         <CheckBoxPreference
+            android:defaultValue="false"	
+            android:key="prefAdminPassActive"
+            android:summary="@string/pref_admin_pass_active_summary"
+            android:title="@string/pref_admin_pass_active_title" >
+        </CheckBoxPreference>
+
+        <EditTextPreference
+            android:key="prefAdminPassword"
+            android:summary="@string/pref_admin_password_summary"
+            android:title="@string/pref_admin_password"
+            android:defaultValue="1234"
+            android:dependency="prefAdminPassActive" />
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_app_category" >
+        <EditTextPreference
+            android:key="prefAppAltitudeCorrectionMeters"
+            android:title="@string/pref_app_altitudeCorrectionMeters"
+            android:summary="@string/pref_app_altitudeCorrectionMeters_summary"
+            android:defaultValue="-50"
+            android:inputType = "numberSigned" />
+        
+        <EditTextPreference
+            android:key="prefAppMinTimeMillis"
+            android:title="@string/pref_app_minTimeMillis"
+            android:summary="@string/pref_app_minTimeMillis_summary"
+            android:defaultValue="20000"
+            android:inputType = "number" />
+        
+        <EditTextPreference
+            android:key="prefAppMinDistanceMeters"
+            android:title="@string/pref_app_minDistanceMeters"
+            android:summary="@string/pref_app_minDistanceMeters_summary"
+            android:defaultValue="10"
+            android:inputType = "number" />
+        
+        <EditTextPreference
+            android:key="prefAppMinAccuracy"
+            android:title="@string/pref_app_minAccuracy"
+            android:summary="@string/pref_app_minAccuracy_summary"
+            android:defaultValue="200"
+            android:inputType = "number" />
+        
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefAppShowingDebugToast"
+            android:title="@string/pref_app_showingDebugToast"
+            android:summary="@string/pref_app_showingDebugToast_summary" >
+        </CheckBoxPreference>
+        
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="@string/pref_opengts_category" >
+        <EditTextPreference
+            android:key="prefOpenGtsServer"
+            android:title="@string/pref_opengts_server"
+            android:summary="@string/pref_opengts_server_summary"
+            android:defaultValue="213.96.91.211:8080" />
+        
+        <EditTextPreference
+            android:key="prefOpenGtsGprmc"
+            android:title="@string/pref_opengts_gprmc"
+            android:summary="@string/pref_opengts_gprmc_summary"
+            android:defaultValue="/gprmc/Data?" />
+        
+        <EditTextPreference
+            android:key="prefOpenGtsAccountName"
+            android:title="@string/pref_opengts_accountName"
+            android:summary="@string/pref_opengts_accountName_summary"
+            android:defaultValue="piscinaspepe" />
+        
+        <EditTextPreference
+            android:key="prefOpenGtsUserId"
+            android:title="@string/pref_opengts_userID"
+            android:summary="@string/pref_opengts_userID_summary"
+            android:defaultValue="t0000" />
+        
+    </PreferenceCategory>
+</PreferenceScreen>

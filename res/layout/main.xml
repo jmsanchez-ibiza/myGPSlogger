@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:id="@+id/ScrollView01"
+	android:layout_height="wrap_content" xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent">
+
+	<LinearLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical" >
+
+	    <TextView
+	        android:id="@+id/TextViewCurrentTripName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="Ruta en curso:" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/EditTextTripName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="200px" >
+	    </TextView>
+
+	    <Button
+	        android:id="@+id/ButtonStart"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/start"
+	        android:textSize="16px"
+	        android:textStyle="bold"
+	        android:width="200px" />
+
+	    <Button
+	        android:id="@+id/ButtonStop"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/stop"
+	        android:textSize="16px"
+	        android:textStyle="bold"
+	        android:width="200px" />
+
+	    <TextView
+	        android:id="@+id/TextViewCurrentCoord"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="Lat, Lon:" />
+
+	    <TextView
+	        android:id="@+id/currentCoord"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="200px" />
+
+	    <TextView
+	        android:id="@+id/TextViewCurrentSpeed"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="Velocidad (m/s):" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/currentSpeed"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="200px" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/TextViewCurrentAltitude"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="Altitud:" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/currentAltitude"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="200px" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/TextViewCurrentAccuracy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="Precisión:" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/currentAccuracy"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="200px" >
+	    </TextView>
+
+	    <TextView
+	        android:id="@+id/TextViewMinTime"
+	        android:layout_width="wrap_content"
+	        android:layout_height="fill_parent"
+	        android:text="Tiempo intérvalo:" />
+
+	    <TextView
+	        android:id="@+id/currentMinTimeMillis"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:width="200px" />
+
+	    <Button
+	        android:id="@+id/ButtonUpdate"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="@string/update"
+	        android:textSize="16px"
+	        android:textStyle="bold"
+	        android:width="200px" />
+	</LinearLayout>
+
+</ScrollView>

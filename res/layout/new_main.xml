@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/scroll" android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+    <LinearLayout 
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical">
+
+
+        <TextView android:id="@+id/textStatus" android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"/>
+
+
+        <TableLayout android:id="@+id/TableGPS"
+                     android:layout_width="fill_parent" android:layout_height="wrap_content"
+                     android:stretchColumns="1" android:background="#000000">
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+                <TextView android:id="@+id/txtDateTime"
+                          android:gravity="left" android:textStyle="bold" android:padding="2dip"
+                          android:layout_span="2"/>
+            </TableRow>
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Latitud:"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtLatitude" android:gravity="left"
+                          android:padding="3dip" android:textColor="#e8a317"
+                          android:textStyle="bold" android:textSize="18sp"/>
+            </TableRow>
+
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:padding="3dip"
+                    android:text="Longitud:"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtLongitude" android:gravity="left"
+                          android:padding="3dip" android:textColor="#e8a317"
+                          android:textStyle="bold" android:textSize="18sp"/>
+            </TableRow>
+
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:id="@+id/lblAltitude"
+                    android:padding="3dip"
+                    android:text="Altitud:"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtAltitude" android:gravity="left"
+                          android:padding="3dip"/>
+            </TableRow>
+
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:id="@+id/lblSpeed"
+                    android:padding="3dip"
+                    android:text="Velocidad:"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtSpeed" android:gravity="left"
+                          android:padding="3dip"/>
+            </TableRow>
+
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:id="@+id/lblDirection"
+                    android:padding="3dip"
+                    android:text="Dirección:"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtDirection" android:gravity="left"
+                          android:padding="3dip"/>
+            </TableRow>
+
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:id="@+id/lblSatellites"
+                    android:padding="3dip"
+                    android:text="Satélites:"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtSatellites" android:gravity="left"
+                          android:padding="3dip"/>
+            </TableRow>
+
+            <TableRow android:background="#333333" android:layout_margin="1dip">
+
+                <TextView
+                    android:id="@+id/lblAccuracy"
+                    android:padding="3dip"
+                    android:text="Precisión:"
+                    android:textStyle="bold" />
+
+                <TextView android:id="@+id/txtAccuracy" android:gravity="left"
+                          android:padding="3dip"/>
+            </TableRow>
+        </TableLayout>
+
+
+        <LinearLayout android:orientation="vertical"
+                      android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <!--
+                <Button android:id="@+id/buttonStart" android:layout_width="120px"
+                android:layout_height="wrap_content" android:tag="Start"
+                android:text="Start" /> <Button android:id="@+id/buttonStop"
+                android:layout_width="120px" android:layout_height="wrap_content"
+                android:tag="Stop" android:text="Stop" />
+            -->
+
+            <Button
+                android:id="@+id/buttonRegistro"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Detener registro"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <TableLayout android:id="@+id/TableSummary"
+                     android:layout_width="fill_parent" android:layout_height="wrap_content"
+                     android:background="#222222">
+
+            <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/lblNombreFichero"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Guardar en:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtTripName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/lblPassActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Pass Activo:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtPassActive"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/lblFrequency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Frecuencia:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView android:id="@+id/txtFrequency" android:layout_width="wrap_content"
+                          android:paddingLeft="3dip" android:textSize="9dip" android:textStyle="italic"
+                          android:layout_height="fill_parent"/>
+            </TableRow>
+            
+            <TableRow android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/lblMinAccuracy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Precisión min.:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView android:id="@+id/txtMinAccuracy" android:layout_width="wrap_content"
+                          android:paddingLeft="3dip" android:textSize="9dip" android:textStyle="italic"
+                          android:layout_height="fill_parent"/>
+            </TableRow>
+
+
+            <TableRow android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/lblDistance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Distancia Min.:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView android:id="@+id/txtDistance" android:layout_width="wrap_content"
+                          android:paddingLeft="3dip" android:textSize="9dip" android:textStyle="italic"
+                          android:layout_height="fill_parent"/>
+            </TableRow>
+
+
+            <TableRow android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/lblAltitudeCorrectionMeters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Correc. Altitud:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtAltitudeCorrectionMeters"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/lblShowDebug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Debug:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtShowDebug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/lblServer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="OPEN_GTS Server:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtServer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/lblAccountName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Cuenta:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtAccountName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" >
+
+                <TextView
+                    android:id="@+id/lblUserID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="8dip"
+                    android:text="Usuario:"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/txtUserID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:paddingLeft="3dip"
+                    android:textSize="9dip"
+                    android:textStyle="italic" />
+            </TableRow>
+
+
+        </TableLayout>
+
+        <!-- 	<TextView android:id="@+id/lblSummary" android:layout_width="fill_parent"
+      android:layout_height="wrap_content" android:textStyle="italic"
+      android:textSize="11dip" /> -->
+
+
+    </LinearLayout>
+</ScrollView>
